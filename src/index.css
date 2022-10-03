@@ -1,0 +1,33 @@
+:root {
+  --fondo: #14131b;
+  --base: #24232b;
+  --verde: #adfab6;
+  --grisClaro: #4e4d55;
+  --amarillo: #f2c95f;
+  --blanco: #eeedf5bb;
+  --fuentePrincipal: 'Oswald', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 2rem;  
+  font-family: 'Space Mono', monospace;
+  line-height: 1.5;
+  font-weight: 700;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+}

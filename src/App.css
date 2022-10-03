@@ -1,0 +1,171 @@
+.body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fondo);
+}
+
+.contenedor {
+  max-width: 50rem;
+  width: 90%;
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  color: var(--grisClaro);
+  margin-bottom: 2rem;
+}
+
+.password {
+  background-color: var(--base);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.password__p {
+  color: var(--grisClaro);
+}
+
+.password__icon {
+  color: var(--verde);
+}
+
+.copy {
+  all: unset;
+  cursor: pointer;
+}
+
+.second__container {
+  background-color: var(--base);
+  margin-top: 2rem;
+  padding: 3rem;
+}
+
+.slider__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider__flex label {
+  color: var(--blanco);
+  font-size: 1.5rem;
+}
+
+.slider__flex p {
+  color: var(--verde);
+  font-size: 2.5rem;
+}
+
+.div__range {
+  margin-bottom: 2rem;
+}
+
+.range {
+  -webkit-appearance: none;
+  width: 100%;
+  background: var(--fondo);
+  height: .7rem;
+  background-image: linear-gradient(var(--verde), var(--verde));
+  background-repeat: no-repeat;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0;
+  background-color: var(--blanco);
+  cursor: pointer;
+}
+
+.checkbox__flex {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.checkbox {
+  all: unset;
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  transition: all .2s ease;
+  background-color: var(--base);
+  border: 2px var(--blanco) solid;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.checkbox:checked {
+  transition: all .2s ease;
+  background-color: var(--verde);
+  border: 2px var(--verde) solid;
+  background-image: url(../public/check-solid.svg);
+  background-size: 1.4rem;
+  background-position: center;
+}
+
+.checkbox__label {
+  color: var(--blanco);
+  font-size: 1.5rem;
+}
+
+.strength {
+  background-color: var(--fondo);
+  padding: 1.5rem 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.strength p {
+  color: var(--grisClaro);
+  font-size: 1.5rem;
+}
+
+.level {
+  display: flex;
+  gap: .5rem;
+}
+
+.level p {
+  margin-right: 1rem;
+}
+
+.levels {
+  display: inline-block;
+  height: 100%;
+  width: .7rem;
+  transition: background-color .3s;
+  background-color: transparent;
+  border: 2px var(--blanco) solid;
+}
+
+.color {
+  transition: all .3s;
+  background-color: var(--amarillo);
+  border: var(--amarillo);
+} 
+
+.generate {
+  padding: 2rem;
+  background-color: var(--verde);
+  width: 100%;
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.generate:hover {
+  background-color: transparent;
+  border: 2px var(--verde) solid; 
+  color: var(--verde);
+}

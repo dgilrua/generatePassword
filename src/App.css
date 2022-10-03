@@ -34,11 +34,6 @@
   color: var(--verde);
 }
 
-.copy {
-  all: unset;
-  cursor: pointer;
-}
-
 .second__container {
   background-color: var(--base);
   margin-top: 2rem;

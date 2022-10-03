@@ -37,24 +37,53 @@ function App() {
                   min={0} max={30} 
                   value={longitud} 
                   onChange={e => setLongitud(e.target.valueAsNumber)} 
+                  disabled={generar && true}
                 />
               </div>
             </div>
             <div>
               <div className='checkbox__flex'>
-                <input className='checkbox' type="checkbox" id='uppercase' checked={uppercase} onChange={() => uppercase === true ? setUppercase(false) : setUppercase(true)} />
+                <input 
+                  className='checkbox' 
+                  type="checkbox" 
+                  disabled={generar && true} 
+                  id='uppercase' 
+                  checked={uppercase} 
+                  onChange={() => uppercase === true ? setUppercase(false) : setUppercase(true)} 
+                />
                 <label className='checkbox__label' htmlFor="uppercase">Include Uppercase Letters</label>
               </div>
               <div className='checkbox__flex'>
-                <input className='checkbox' type="checkbox" id='lowercase' checked={lowercase} onChange={() => lowercase === true ? setLowercase(false) : setLowercase(true)}/>
+                <input 
+                  className='checkbox' 
+                  type="checkbox" 
+                  disabled={generar && true} 
+                  id='lowercase' 
+                  checked={lowercase} 
+                  onChange={() => lowercase === true ? setLowercase(false) : setLowercase(true)}
+                />
                 <label className='checkbox__label' htmlFor="lowercase">Include Lowercase Letters</label>
               </div>
               <div className='checkbox__flex'>
-                <input className='checkbox' type="checkbox" id='numbers' checked={number} onChange={() => number === true ? setNumber(false) : setNumber(true)}/>
+                <input 
+                  className='checkbox' 
+                  type="checkbox" 
+                  disabled={generar && true} 
+                  id='numbers' 
+                  checked={number} 
+                  onChange={() => number === true ? setNumber(false) : setNumber(true)}
+                />
                 <label className='checkbox__label' htmlFor="numbers">Include Numbers</label>
               </div>
               <div className='checkbox__flex'>
-                <input className='checkbox' type="checkbox" id='symbols' checked={symbols} onChange={() => symbols === true ? setSymbols(false) : setSymbols(true)}/>
+                <input 
+                  className='checkbox' 
+                  type="checkbox" 
+                  disabled={generar && true} 
+                  id='symbols' 
+                  checked={symbols} 
+                  onChange={() => symbols === true ? setSymbols(false) : setSymbols(true)}
+                />
                 <label className='checkbox__label' htmlFor="symbols">Include Symbols</label>
               </div>
             </div>
@@ -62,7 +91,12 @@ function App() {
           <div className='strength'>
             <p>STRENGTH</p>
             <div className='level'>
-              {longitud > 0 && longitud <= 8 ? <p>LOW</p> : longitud > 8 && longitud <= 20 ? <p>MEDIUM</p> : longitud > 20 && longitud <= 30 ? <p>HIGH</p> : null}
+              {
+                longitud > 0 && longitud <= 8 ? <p>LOW</p>
+                : longitud > 8 && longitud <= 20 ? <p>MEDIUM</p> 
+                : longitud > 20 && longitud <= 30 ? <p>HIGH</p> 
+                : null
+              }
               <div className={`levels ${ longitud > 0 ? 'color' : ''}`}></div>
               <div className={`levels ${ longitud > 8 ? 'color' : ''}`}></div>
               <div className={`levels ${ longitud > 14 ? 'color' : ''}`}></div>

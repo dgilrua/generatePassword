@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import generarContraseña from './helpers/generarContraseña'
 
 function App() {
 
@@ -10,9 +11,28 @@ function App() {
   const [longitud, setLongitud] = useState(0)
   const [generar, setGenerar] = useState(false)
 
+  const handleReset = () => {
+    setLongitud(0)
+    setLowercase(false)
+    setNumber(false)
+    setSymbols(false)
+    setUppercase(false)
+    setGenerar(false)
+  }
+
   const handleGenerate = () => {
-    const a = 'asdasdad'
-    return a
+    if(longitud > 0) {
+      setGenerar(true)
+      return
+    }
+  }
+
+  const data = {
+    uppercase,
+    lowercase,
+    number,
+    symbols,
+    longitud
   }
 
   return (
@@ -20,7 +40,7 @@ function App() {
       <div className='contenedor'>
         <p className='title'>Password Generator</p>
         <div className='password'>
-          <p className='password__p '>{generar ? handleGenerate() : 'Contraseña'}</p>
+          <p className='password__p '>{generar ? generarContraseña(data) : 'Contraseña'}</p>
           <i className="fa-regular fa-copy password__icon"></i>
         </div>
         <div className='second__container'>
@@ -107,8 +127,8 @@ function App() {
           <button 
             className='generate' 
             type='button'
-            onClick={() => setGenerar(true)}
-          > GENERATE {'->'} </button>
+            onClick={() => generar ? handleReset() : handleGenerate()}
+          >{generar ?  'RESET ->' :'GENERATE ->'} </button>
         </div>
       </div>
 
